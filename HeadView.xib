@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HeadView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gf1-yv-EIg">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z52-g2-HpV">
+                            <rect key="frame" x="0.0" y="0.0" width="10" height="50"/>
+                            <color key="backgroundColor" red="0.54509803921568623" green="0.77647058823529413" blue="0.19215686274509805" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="10" id="08H-FB-bpS"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6h-nc-VWd">
+                            <rect key="frame" x="20" y="5" width="90" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="90" id="4YE-3v-dMt"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtx-hU-6nT">
+                            <rect key="frame" x="20" y="29" width="145" height="17"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="145" id="RFP-xY-tc6"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                            <color key="textColor" red="0.49803921568627452" green="0.6470588235294118" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pu2-XA-hTi">
+                            <rect key="frame" x="333" y="9" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="32" id="ey3-mz-qzW"/>
+                            </constraints>
+                            <state key="normal" image="delete"/>
+                            <state key="selected" image="delete"/>
+                            <state key="highlighted" image="delete"/>
+                            <connections>
+                                <action selector="btnDel:" destination="iN0-l3-epB" eventType="touchUpInside" id="0kk-sv-N3P"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Wtx-hU-6nT" secondAttribute="bottom" constant="4" id="EcT-vh-c0Y"/>
+                        <constraint firstItem="z52-g2-HpV" firstAttribute="top" secondItem="Gf1-yv-EIg" secondAttribute="top" id="VSO-8e-bpv"/>
+                        <constraint firstAttribute="bottom" secondItem="Pu2-XA-hTi" secondAttribute="bottom" constant="9" id="Yed-ga-1mT"/>
+                        <constraint firstItem="Wtx-hU-6nT" firstAttribute="top" secondItem="v6h-nc-VWd" secondAttribute="bottom" constant="2" id="eqS-1E-n7U"/>
+                        <constraint firstItem="Pu2-XA-hTi" firstAttribute="top" secondItem="Gf1-yv-EIg" secondAttribute="top" constant="9" id="mZW-Wd-WDP"/>
+                        <constraint firstItem="z52-g2-HpV" firstAttribute="leading" secondItem="Gf1-yv-EIg" secondAttribute="leading" id="nm6-UX-4cL"/>
+                        <constraint firstItem="v6h-nc-VWd" firstAttribute="top" secondItem="Gf1-yv-EIg" secondAttribute="top" constant="5" id="oqO-Cf-FF2"/>
+                        <constraint firstAttribute="trailing" secondItem="Pu2-XA-hTi" secondAttribute="trailing" constant="10" id="pOf-GF-Vg5"/>
+                        <constraint firstItem="Wtx-hU-6nT" firstAttribute="leading" secondItem="z52-g2-HpV" secondAttribute="trailing" constant="10" id="t0d-EE-84I"/>
+                        <constraint firstAttribute="bottom" secondItem="z52-g2-HpV" secondAttribute="bottom" id="tSg-U7-OfR"/>
+                        <constraint firstItem="v6h-nc-VWd" firstAttribute="leading" secondItem="z52-g2-HpV" secondAttribute="trailing" constant="10" id="x2W-Ve-PG5"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.95840336780000002" green="0.96372097209999996" blue="0.97238005049999998" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Gf1-yv-EIg" secondAttribute="trailing" id="A9P-pT-aou"/>
+                <constraint firstItem="Gf1-yv-EIg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Kcz-8P-XMA"/>
+                <constraint firstItem="Gf1-yv-EIg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="O26-Nw-dfn"/>
+                <constraint firstAttribute="bottom" secondItem="Gf1-yv-EIg" secondAttribute="bottom" id="Tdl-NB-68I"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lblDate" destination="Wtx-hU-6nT" id="ulJ-33-CoG"/>
+                <outlet property="lblFull" destination="v6h-nc-VWd" id="chi-YO-i8W"/>
+            </connections>
+            <point key="canvasLocation" x="345.5" y="356"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="delete" width="32" height="32"/>
+    </resources>
+</document>
