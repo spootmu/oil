@@ -18,11 +18,6 @@
  */
 +(NSString*)getFormatDate:(NSDate*)date
 {
-//    NSDateFormatter *format=[[NSDateFormatter alloc]init];
-//    [format setDateFormat:@"HH:mm"];
-//    NSString *finaldate=[format stringFromDate:date];
-    
-    
     NSDateFormatter *format=[[NSDateFormatter alloc]init];
     [format setDateStyle:NSDateFormatterFullStyle];
     [format setDateFormat:@"yyyy-MM-dd"];
