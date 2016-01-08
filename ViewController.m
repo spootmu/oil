@@ -14,6 +14,7 @@
 #import "HeadView.h"
 #import "CommonTools.h"
 #import "CellView.h"
+#import "MBProgressHUD+NJ.h"
 @interface ViewController ()<HeadViewDelegate>
 @property(nonatomic,strong) NSManagedObjectContext *context;
 @property(nonatomic,strong) NSArray *fulloilsData;
@@ -34,7 +35,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initUI];
-    [self initData];
+    
+//    dispatch_queue_t concurrentQueue = dispatch_queue_create("my.concurrent.queue", DISPATCH_QUEUE_CONCURRENT);
+//    dispatch_async(concurrentQueue, ^(){
+     [MBProgressHUD showMessage:@"正在加载...不要猴急"];
+        [self initData];
+//    });
+   
+//    [NSThread detachNewThreadSelector:@selector(initData) toTarget:self withObject:nil];
 }
 
 
@@ -146,6 +154,7 @@
  */
 -(void)initData
 {
+    
     self.fulloilsData=nil;
     NSFetchRequest *request=[[NSFetchRequest alloc]init];
     request.entity=[NSEntityDescription entityForName:@"FullOil" inManagedObjectContext:self.context];
@@ -160,6 +169,7 @@
         [NSException raise:@"查询失败" format:@"%@",[requesterr localizedDescription]];
     }
     self.fulloilsData=arr;
+    [MBProgressHUD hideHUD];
     [self.tableView reloadData];
     
 }
